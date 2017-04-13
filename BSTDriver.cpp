@@ -55,12 +55,16 @@ int main()
    //display the height of the binary search tree (not minimum height)
    //display whether the binary search tree is balanced (should not be balanced)
 
-
-
-
-
-
-
+   cout << "The height of the binary search tree before being minimized is: " << bst->getHeight() << endl << endl;
+   cout << "Is the binary search tree balanced?" << endl << endl;
+   if(bst->isBalanced() == true)
+   {
+     cout << "Yes, the bst is balanced." << endl << endl;
+   }
+   else
+   {
+     cout << "No, the bst is not balanced." << endl << endl;
+   }
 
    //create a minimum height binary search tree
    BinarySearchTree<CD>* min_bst = bst->minimize();
@@ -78,14 +82,17 @@ int main()
    //DO THIS
    //display the height of the binary search tree (should be minimum height)
    //display whether the binary search tree is balanced (should be balanced)
-
-
-
-
-
-
-
-
+   
+   cout << "The height of the binary search tree after being minimized is: " << min_bst->getHeight() << endl << endl;
+   cout << "Is the minimized binary search tree balanced?" << endl << endl;
+   if(min_bst->isBalanced() == true)
+   {
+     cout << "Yes, the minimized bst is balanced." << endl << endl;
+   }
+   else
+   {
+     cout << "No, the minimized bst is not balanced." << endl << endl;
+   }
 
    //create a complete binary search tree
    BinarySearchTree<CD>* complete_bst = bst->minimizeComplete();
@@ -105,12 +112,16 @@ int main()
    //display the height of the complete binary search tree (should be minimum height)
    //display whether the binary search tree is balanced (should be balanced)
 
-
-
-
-
-
-
+   cout << "The height of the complete binary search tree (which should be minimum height) is: " << complete_bst->getHeight() << endl << endl;
+   cout << "Is the binary search tree balanced?" << endl << endl;
+   if(complete_bst->isBalanced() == true)
+   {
+     cout << "Yes, the complete bst is balanced." << endl << endl;
+   }
+   else
+   {
+     cout << "No, the complete bst is not balanced." << endl << endl;
+   }
 
 
    delete complete_bst;
