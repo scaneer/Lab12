@@ -112,10 +112,24 @@ template < class T >
 bool BinarySearchTree<T>::isBalanced(TreeNode<T>* tNode)
 {
    //DO THIS
-   
+   TreeNode<T>* left = tNode->getLeft();
+   TreeNode<T>* right = tNode->getRight();
 
+   TreeNode<T>* lht = getHeight(left);
+   TreeNode<T>* rht = getHeight(right);
 
-
+   if(root == NULL)
+   {
+     return true;
+   }
+   else if(abs((lht-rht))<= 1 && isBalanced(root->getLeft()) && isBalanced(root->getRight()))
+   {
+     return true;
+   }
+   else
+   {
+     return false;
+   }
 }
 
 template < class T >
